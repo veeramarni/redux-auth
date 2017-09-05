@@ -1311,7 +1311,7 @@
 	}
 
 	function getPasswordResetRedirectUrl() {
-	  return root.authState.currentSettings.confirmationSuccessUrl();
+	  return root.authState.currentSettings.passwordResetSuccessUrl();
 	}
 
 	function getApiUrl(key) {
