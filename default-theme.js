@@ -761,6 +761,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _propTypes = __webpack_require__(38);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	var _rcDialog = __webpack_require__(45);
 
 	var _rcDialog2 = _interopRequireDefault(_rcDialog);
@@ -851,10 +855,10 @@
 	}(_react2.default.Component);
 
 	BaseModal.propTypes = {
-	  show: _react.PropTypes.bool,
-	  errorAddr: _react.PropTypes.array,
-	  closeBtnLabel: _react.PropTypes.string,
-	  closeAction: _react.PropTypes.func
+	  show: _propTypes2.default.bool,
+	  errorAddr: _propTypes2.default.array,
+	  closeBtnLabel: _propTypes2.default.string,
+	  closeAction: _propTypes2.default.func
 	};
 	BaseModal.defaultProps = {
 	  show: false,
@@ -1952,6 +1956,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _propTypes = __webpack_require__(38);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	var _reactBootstrap = __webpack_require__(7);
 
 	var _ButtonLoader = __webpack_require__(63);
@@ -2082,8 +2090,8 @@
 	}(_react2.default.Component);
 
 	PasswordResetSuccessModal.propTypes = {
-	  show: _react.PropTypes.bool,
-	  inputProps: _react.PropTypes.object
+	  show: _propTypes2.default.bool,
+	  inputProps: _propTypes2.default.object
 	};
 	PasswordResetSuccessModal.defaultProps = {
 	  show: false,
