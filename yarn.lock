@@ -985,9 +985,9 @@ bootstrap-webpack@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/bootstrap-webpack/-/bootstrap-webpack-0.0.5.tgz#c843494022140b545b711b5cd272942b9da01766"
 
-bootstrap@^3.3.5:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
+bootstrap@4.0.0-beta:
+  version "4.0.0-beta"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-beta.tgz#dc5928175d2e71310bc668cf9e05a907211b72a6"
 
 bowser@^1.0.0:
   version "1.7.1"
@@ -2336,9 +2336,13 @@ hoek@2.x.x, hoek@^2.14.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hoist-non-react-statics@^1.0.0, hoist-non-react-statics@^1.0.3, hoist-non-react-statics@^1.2.0:
+hoist-non-react-statics@^1.0.0, hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+
+hoist-non-react-statics@^2.2.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
 
 home-or-tmp@^1.0.0:
   version "1.0.0"
@@ -2971,7 +2975,7 @@ lodash-compat@^3.10.2:
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/lodash-compat/-/lodash-compat-3.10.2.tgz#c6940128a9d30f8e902cd2cf99fd0cba4ecfc183"
 
-lodash-es@^4.2.1:
+lodash-es@^4.2.0, lodash-es@^4.2.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
 
@@ -4197,7 +4201,7 @@ react-bootstrap@^0.29.5:
     uncontrollable "^3.2.3"
     warning "^2.1.0"
 
-"react-dom@>= 0.14.0-rc1", react-dom@^15.6.1:
+"react-dom@>= 0.14.0-rc1":
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
@@ -4205,6 +4209,15 @@ react-bootstrap@^0.29.5:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
+
+react-dom@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react-event-listener@^0.2.1:
   version "0.2.1"
@@ -4248,16 +4261,22 @@ react-prop-types@^0.4.0:
   dependencies:
     warning "^3.0.0"
 
-react-redux@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-3.1.2.tgz#2a888b124e9d01144853612acee19f81d498a836"
+react-redux@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
   dependencies:
-    hoist-non-react-statics "^1.0.3"
+    hoist-non-react-statics "^2.2.1"
     invariant "^2.0.0"
+    lodash "^4.2.0"
+    lodash-es "^4.2.0"
+    loose-envify "^1.1.0"
+    prop-types "^15.5.10"
 
-react-router-bootstrap@^0.19.0:
-  version "0.19.3"
-  resolved "https://registry.yarnpkg.com/react-router-bootstrap/-/react-router-bootstrap-0.19.3.tgz#5c41b116f86fed437dfee3f74d88254d562f6fd7"
+react-router-bootstrap@react-bootstrap/react-router-bootstrap#rr-v3:
+  version "0.23.3"
+  resolved "https://codeload.github.com/react-bootstrap/react-router-bootstrap/tar.gz/69175022e5a51fe10e7c79132db75f13deb5eb98"
+  dependencies:
+    prop-types "^15.5.8"
 
 react-router-redux@next:
   version "5.0.0-alpha.6"
@@ -4332,15 +4351,14 @@ react-transmit@3.0.6:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react@^15.6.1:
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
+react@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
   dependencies:
-    create-react-class "^15.6.0"
-    fbjs "^0.8.9"
+    fbjs "^0.8.16"
     loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 read-all-stream@^3.0.0:
   version "3.1.0"
