@@ -413,17 +413,17 @@
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = require("immutable");
 
 /***/ },
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
 /* 15 */,
 /* 16 */,
 /* 17 */,
@@ -2562,7 +2562,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -2618,7 +2618,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -2682,7 +2682,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -2810,7 +2810,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3021,7 +3021,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3086,7 +3086,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3154,7 +3154,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3213,7 +3213,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3278,7 +3278,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3343,7 +3343,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3406,7 +3406,7 @@
 	  value: true
 	});
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3459,7 +3459,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
@@ -3519,7 +3519,7 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
