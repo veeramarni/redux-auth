@@ -30,6 +30,7 @@
     "default-theme.js",
     "bootstrap-theme.js",
     "material-ui-theme.js",
+    "semantic-ui-theme.js",
     "index.js",
     "LICENSE.md",
     "README.md"
@@ -45,7 +46,8 @@
     "rc-dialog": "^6.1.1",
     "react-bootstrap": "^0.31.3",
     "react-loader": "^2.4.0",
-    "redux-immutablejs": "0.0.8"
+    "redux-immutablejs": "0.0.8",
+    "semantic-ui-react": "^0.75.1"
   },
   "devDependencies": {
     "babel-cli": "6.3.13",

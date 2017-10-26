@@ -2770,7 +2770,7 @@
 	  // this point.
 	  return user.uid ? state.merge({
 	    attributes: user,
-	    isSignedIn: true,
+	    isSignedIn: false,
 	    endpointKey: endpoint
 	  }) : state;
 	}), _defineProperty(_createReducer, _oauthSignIn.OAUTH_SIGN_IN_COMPLETE, function (state, _ref7) {
