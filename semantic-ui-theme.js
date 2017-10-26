@@ -40,9 +40,8 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -106,43 +105,275 @@
 	exports.ButtonLoader = _ButtonLoader3.default;
 
 /***/ },
-
-/***/ 2:
+/* 1 */,
+/* 2 */
 /***/ function(module, exports) {
 
 	module.exports = require("react");
 
 /***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 9:
+	/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 *
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
+	 */
+
+	if (false) {
+	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+	    Symbol.for &&
+	    Symbol.for('react.element')) ||
+	    0xeac7;
+
+	  var isValidElement = function(object) {
+	    return typeof object === 'object' &&
+	      object !== null &&
+	      object.$$typeof === REACT_ELEMENT_TYPE;
+	  };
+
+	  // By explicitly using `prop-types` you are opting into new development behavior.
+	  // http://fb.me/prop-types-in-prod
+	  var throwOnDirectAccess = true;
+	  module.exports = require('./factoryWithTypeCheckers')(isValidElement, throwOnDirectAccess);
+	} else {
+	  // By explicitly using `prop-types` you are opting into new production behavior.
+	  // http://fb.me/prop-types-in-prod
+	  module.exports = __webpack_require__(4)();
+	}
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 *
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
+	 */
+
+	'use strict';
+
+	var emptyFunction = __webpack_require__(5);
+	var invariant = __webpack_require__(6);
+	var ReactPropTypesSecret = __webpack_require__(7);
+
+	module.exports = function() {
+	  function shim(props, propName, componentName, location, propFullName, secret) {
+	    if (secret === ReactPropTypesSecret) {
+	      // It is still safe when called from React.
+	      return;
+	    }
+	    invariant(
+	      false,
+	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+	      'Use PropTypes.checkPropTypes() to call them. ' +
+	      'Read more at http://fb.me/use-check-prop-types'
+	    );
+	  };
+	  shim.isRequired = shim;
+	  function getShim() {
+	    return shim;
+	  };
+	  // Important!
+	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+	  var ReactPropTypes = {
+	    array: shim,
+	    bool: shim,
+	    func: shim,
+	    number: shim,
+	    object: shim,
+	    string: shim,
+	    symbol: shim,
+
+	    any: shim,
+	    arrayOf: getShim,
+	    element: shim,
+	    instanceOf: getShim,
+	    node: shim,
+	    objectOf: getShim,
+	    oneOf: getShim,
+	    oneOfType: getShim,
+	    shape: getShim,
+	    exact: getShim
+	  };
+
+	  ReactPropTypes.checkPropTypes = emptyFunction;
+	  ReactPropTypes.PropTypes = ReactPropTypes;
+
+	  return ReactPropTypes;
+	};
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 *
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
+	 *
+	 * 
+	 */
+
+	function makeEmptyFunction(arg) {
+	  return function () {
+	    return arg;
+	  };
+	}
+
+	/**
+	 * This function accepts and discards inputs; it has no side effects. This is
+	 * primarily useful idiomatically for overridable function endpoints which
+	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+	 */
+	var emptyFunction = function emptyFunction() {};
+
+	emptyFunction.thatReturns = makeEmptyFunction;
+	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+	emptyFunction.thatReturnsThis = function () {
+	  return this;
+	};
+	emptyFunction.thatReturnsArgument = function (arg) {
+	  return arg;
+	};
+
+	module.exports = emptyFunction;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 *
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
+	 *
+	 */
+
+	'use strict';
+
+	/**
+	 * Use invariant() to assert state which your program assumes to be true.
+	 *
+	 * Provide sprintf-style format (only %s is supported) and arguments
+	 * to provide information about what broke and what you were
+	 * expecting.
+	 *
+	 * The invariant message will be stripped in production, but the invariant
+	 * will remain to ensure logic does not differ in production.
+	 */
+
+	var validateFormat = function validateFormat(format) {};
+
+	if (false) {
+	  validateFormat = function validateFormat(format) {
+	    if (format === undefined) {
+	      throw new Error('invariant requires an error message argument');
+	    }
+	  };
+	}
+
+	function invariant(condition, format, a, b, c, d, e, f) {
+	  validateFormat(format);
+
+	  if (!condition) {
+	    var error;
+	    if (format === undefined) {
+	      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+	    } else {
+	      var args = [a, b, c, d, e, f];
+	      var argIndex = 0;
+	      error = new Error(format.replace(/%s/g, function () {
+	        return args[argIndex++];
+	      }));
+	      error.name = 'Invariant Violation';
+	    }
+
+	    error.framesToPop = 1; // we don't care about invariant's own frame
+	    throw error;
+	  }
+	}
+
+	module.exports = invariant;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 *
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
+	 */
+
+	'use strict';
+
+	var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+	module.exports = ReactPropTypesSecret;
+
+
+/***/ },
+/* 8 */,
+/* 9 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-redux");
 
 /***/ },
-
-/***/ 10:
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-auth");
 
 /***/ },
-
-/***/ 14:
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = require("immutable");
 
 /***/ },
-
-/***/ 32:
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-loader");
 
 /***/ },
-
-/***/ 34:
+/* 33 */,
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -206,8 +437,128 @@
 	})(TokenBridge);
 
 /***/ },
-
-/***/ 156:
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -221,6 +572,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _EmailSignInSuccessModal = __webpack_require__(157);
 
@@ -384,24 +739,24 @@
 	}(_react2.default.Component);
 
 	AuthGlobals.propTypes = {
-	  signOutSuccessEnabled: _react.PropTypes.bool,
-	  signOutErrorEnabled: _react.PropTypes.bool,
-	  emailSignInSuccessEnabled: _react.PropTypes.bool,
-	  emailSignInErrorEnabled: _react.PropTypes.bool,
-	  oAuthSignInSuccessEnabled: _react.PropTypes.bool,
-	  oAuthSignInErrorEnabled: _react.PropTypes.bool,
-	  emailSignUpSuccessEnabled: _react.PropTypes.bool,
-	  emailSignUpErrorEnabled: _react.PropTypes.bool,
-	  firstTimeLoginSuccessEnabled: _react.PropTypes.bool,
-	  firstTimeLoginErrorEnabled: _react.PropTypes.bool,
-	  requestPasswordResetErrorEnabled: _react.PropTypes.bool,
-	  requestPasswordResetSuccessEnabled: _react.PropTypes.bool,
-	  updatePasswordErrorEnabled: _react.PropTypes.bool,
-	  updatePasswordSuccessEnabled: _react.PropTypes.bool,
-	  destroyAccountErrorEnabled: _react.PropTypes.bool,
-	  destroyAccountSuccessEnabled: _react.PropTypes.bool,
-	  passwordResetSuccessEnabled: _react.PropTypes.bool,
-	  passwordResetErrorEnabled: _react.PropTypes.bool
+	  signOutSuccessEnabled: _propTypes2.default.bool,
+	  signOutErrorEnabled: _propTypes2.default.bool,
+	  emailSignInSuccessEnabled: _propTypes2.default.bool,
+	  emailSignInErrorEnabled: _propTypes2.default.bool,
+	  oAuthSignInSuccessEnabled: _propTypes2.default.bool,
+	  oAuthSignInErrorEnabled: _propTypes2.default.bool,
+	  emailSignUpSuccessEnabled: _propTypes2.default.bool,
+	  emailSignUpErrorEnabled: _propTypes2.default.bool,
+	  firstTimeLoginSuccessEnabled: _propTypes2.default.bool,
+	  firstTimeLoginErrorEnabled: _propTypes2.default.bool,
+	  requestPasswordResetErrorEnabled: _propTypes2.default.bool,
+	  requestPasswordResetSuccessEnabled: _propTypes2.default.bool,
+	  updatePasswordErrorEnabled: _propTypes2.default.bool,
+	  updatePasswordSuccessEnabled: _propTypes2.default.bool,
+	  destroyAccountErrorEnabled: _propTypes2.default.bool,
+	  destroyAccountSuccessEnabled: _propTypes2.default.bool,
+	  passwordResetSuccessEnabled: _propTypes2.default.bool,
+	  passwordResetErrorEnabled: _propTypes2.default.bool
 	};
 	AuthGlobals.defaultProps = {
 	  signOutSuccessEnabled: true,
@@ -429,8 +784,7 @@
 	})(AuthGlobals);
 
 /***/ },
-
-/***/ 157:
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -501,8 +855,7 @@
 	})(EmailSignInSuccessModal);
 
 /***/ },
-
-/***/ 158:
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -516,6 +869,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _semanticUiReact = __webpack_require__(159);
 
@@ -602,9 +959,9 @@
 	}(_react2.default.Component);
 
 	BaseModal.propTypes = {
-	  show: _react.PropTypes.bool,
-	  errorAddr: _react.PropTypes.array,
-	  closeBtnLabel: _react.PropTypes.string
+	  show: _propTypes2.default.bool,
+	  errorAddr: _propTypes2.default.array,
+	  closeBtnLabel: _propTypes2.default.string
 	};
 	BaseModal.defaultProps = {
 	  show: false,
@@ -617,18 +974,16 @@
 	})(BaseModal);
 
 /***/ },
-
-/***/ 159:
+/* 159 */
 /***/ function(module, exports) {
 
 	module.exports = require("semantic-ui-react");
 
 /***/ },
-
-/***/ 160:
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -639,6 +994,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _semanticUiReact = __webpack_require__(159);
 
@@ -664,7 +1023,7 @@
 	  }
 
 	  _createClass(ErrorList, [{
-	    key: "renderErrorList",
+	    key: 'renderErrorList',
 	    value: function renderErrorList() {
 	      var errorCount = (this.props.errors || _immutable2.default.fromJS([])).size;
 
@@ -674,43 +1033,43 @@
 	        errorWord += errorCount === 1 ? "" : "s";
 
 	        return _react2.default.createElement(
-	          "div",
-	          { className: "has-error" },
+	          'div',
+	          { className: 'has-error' },
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
-	            "Please correct the following ",
+	            'Please correct the following ',
 	            errorWord,
-	            ":"
+	            ':'
 	          ),
 	          this.props.errors.map(function (err, i) {
 	            return _react2.default.createElement(
-	              "p",
+	              'p',
 	              {
 	                key: i,
-	                className: "control-label modal-error-item",
+	                className: 'control-label modal-error-item',
 	                style: { paddingLeft: "20px", position: "relative" } },
-	              _react2.default.createElement(_semanticUiReact.Icon, { name: "attention", style: { position: "absolute", left: 0, top: 2 } }),
-	              " ",
+	              _react2.default.createElement(_semanticUiReact.Icon, { name: 'attention', style: { position: "absolute", left: 0, top: 2 } }),
+	              ' ',
 	              err
 	            );
 	          })
 	        );
 	      } else {
 	        return _react2.default.createElement(
-	          "p",
+	          'p',
 	          null,
-	          _react2.default.createElement(_semanticUiReact.Icon, { name: "attention" }),
-	          " There was an error processing this form. Please check each field and try again."
+	          _react2.default.createElement(_semanticUiReact.Icon, { name: 'attention' }),
+	          ' There was an error processing this form. Please check each field and try again.'
 	        );
 	      }
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "auth-error-message" },
+	        'div',
+	        { className: 'auth-error-message' },
 	        this.renderErrorList()
 	      );
 	    }
@@ -720,7 +1079,7 @@
 	}(_react2.default.Component);
 
 	ErrorList.propTypes = {
-	  errors: _react.PropTypes.object
+	  errors: _propTypes2.default.object
 	};
 	ErrorList.defaultProps = {
 	  errors: _immutable2.default.fromJS([])
@@ -728,8 +1087,7 @@
 	exports.default = ErrorList;
 
 /***/ },
-
-/***/ 161:
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -785,8 +1143,7 @@
 	exports.default = EmailSignInErrorModal;
 
 /***/ },
-
-/***/ 162:
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -856,8 +1213,7 @@
 	})(OAuthSignInSuccessModal);
 
 /***/ },
-
-/***/ 163:
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -923,8 +1279,7 @@
 	exports.default = OAuthSignInErrorModal;
 
 /***/ },
-
-/***/ 164:
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -994,8 +1349,7 @@
 	})(EmailSignUpSuccessModal);
 
 /***/ },
-
-/***/ 165:
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1051,8 +1405,7 @@
 	exports.default = EmailSignUpErrorModal;
 
 /***/ },
-
-/***/ 166:
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1115,8 +1468,7 @@
 	exports.default = SignOutSuccessModal;
 
 /***/ },
-
-/***/ 167:
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1179,8 +1531,7 @@
 	exports.default = SignOutErrorModal;
 
 /***/ },
-
-/***/ 168:
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1249,8 +1600,7 @@
 	})(FirstTimeLoginSuccessModal);
 
 /***/ },
-
-/***/ 169:
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1313,8 +1663,7 @@
 	exports.default = FirstTimeLoginErrorModal;
 
 /***/ },
-
-/***/ 170:
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1370,8 +1719,7 @@
 	exports.default = RequestPasswordResetErrorModal;
 
 /***/ },
-
-/***/ 171:
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1439,8 +1787,7 @@
 	})(RequestPasswordResetSuccessModal);
 
 /***/ },
-
-/***/ 172:
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1496,8 +1843,7 @@
 	exports.default = UpdatePasswordErrorModal;
 
 /***/ },
-
-/***/ 173:
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1560,8 +1906,7 @@
 	exports.default = UpdatePasswordSuccessModal;
 
 /***/ },
-
-/***/ 174:
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1617,8 +1962,7 @@
 	exports.default = DestroyAccountErrorModal;
 
 /***/ },
-
-/***/ 175:
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1686,8 +2030,7 @@
 	})(DestroyAccountSuccessModal);
 
 /***/ },
-
-/***/ 176:
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1703,6 +2046,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _semanticUiReact = __webpack_require__(159);
 
@@ -1827,8 +2174,8 @@
 	}(_react2.default.Component);
 
 	PasswordResetSuccessModal.propTypes = {
-	  show: _react.PropTypes.bool,
-	  inputProps: _react.PropTypes.object
+	  show: _propTypes2.default.bool,
+	  inputProps: _propTypes2.default.object
 	};
 	PasswordResetSuccessModal.defaultProps = {
 	  show: false,
@@ -1840,11 +2187,10 @@
 	})(PasswordResetSuccessModal);
 
 /***/ },
-
-/***/ 177:
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -1855,6 +2201,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _semanticUiReact = __webpack_require__(159);
 
@@ -1880,7 +2230,7 @@
 	  }
 
 	  _createClass(ButtonLoader, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        _semanticUiReact.Button,
@@ -1902,14 +2252,14 @@
 	}(_react2.default.Component);
 
 	ButtonLoader.propTypes = {
-	  icon: _react.PropTypes.any,
-	  loading: _react.PropTypes.bool,
-	  spinConfig: _react.PropTypes.object,
-	  spinColorDark: _react.PropTypes.string,
-	  spinColorLight: _react.PropTypes.string,
-	  children: _react.PropTypes.node,
-	  onClick: _react.PropTypes.func.isRequired,
-	  style: _react.PropTypes.object
+	  icon: _propTypes2.default.any,
+	  loading: _propTypes2.default.bool,
+	  spinConfig: _propTypes2.default.object,
+	  spinColorDark: _propTypes2.default.string,
+	  spinColorLight: _propTypes2.default.string,
+	  children: _propTypes2.default.node,
+	  onClick: _propTypes2.default.func.isRequired,
+	  style: _propTypes2.default.object
 	};
 	ButtonLoader.defaultProps = {
 	  loading: false,
@@ -1922,17 +2272,16 @@
 	  spinColorDark: "#444",
 	  spinColorLight: "#fff",
 	  children: _react2.default.createElement(
-	    "span",
+	    'span',
 	    null,
-	    "Submit"
+	    'Submit'
 	  ),
 	  style: {}
 	};
 	exports.default = ButtonLoader;
 
 /***/ },
-
-/***/ 178:
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1948,6 +2297,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _semanticUiReact = __webpack_require__(159);
 
@@ -2033,9 +2386,9 @@
 	}(_react2.default.Component);
 
 	AuthInput.propTypes = {
-	  label: _react.PropTypes.string,
-	  value: _react.PropTypes.string,
-	  errors: _react.PropTypes.object
+	  label: _propTypes2.default.string,
+	  value: _propTypes2.default.string,
+	  errors: _propTypes2.default.object
 	};
 	AuthInput.defaultProps = {
 	  label: "",
@@ -2045,8 +2398,7 @@
 	exports.default = AuthInput;
 
 /***/ },
-
-/***/ 179:
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2062,6 +2414,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _Input = __webpack_require__(178);
 
@@ -2155,12 +2511,12 @@
 	}(_react2.default.Component);
 
 	EmailSignInForm.propTypes = {
-	  endpoint: _react.PropTypes.string,
-	  next: _react.PropTypes.func,
-	  inputProps: _react.PropTypes.shape({
-	    email: _react.PropTypes.object,
-	    password: _react.PropTypes.object,
-	    submit: _react.PropTypes.object
+	  endpoint: _propTypes2.default.string,
+	  next: _propTypes2.default.func,
+	  inputProps: _propTypes2.default.shape({
+	    email: _propTypes2.default.object,
+	    password: _propTypes2.default.object,
+	    submit: _propTypes2.default.object
 	  })
 	};
 	EmailSignInForm.defaultProps = {
@@ -2177,8 +2533,7 @@
 	})(EmailSignInForm);
 
 /***/ },
-
-/***/ 180:
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2194,6 +2549,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _Input = __webpack_require__(178);
 
@@ -2305,13 +2664,13 @@
 	}(_react2.default.Component);
 
 	EmailSignUpForm.propTypes = {
-	  endpoint: _react.PropTypes.string,
-	  next: _react.PropTypes.func,
-	  inputProps: _react.PropTypes.shape({
-	    email: _react.PropTypes.object,
-	    password: _react.PropTypes.object,
-	    passwordConfirmation: _react.PropTypes.object,
-	    submit: _react.PropTypes.object
+	  endpoint: _propTypes2.default.string,
+	  next: _propTypes2.default.func,
+	  inputProps: _propTypes2.default.shape({
+	    email: _propTypes2.default.object,
+	    password: _propTypes2.default.object,
+	    passwordConfirmation: _propTypes2.default.object,
+	    submit: _propTypes2.default.object
 	  })
 	};
 	EmailSignUpForm.defaultProps = {
@@ -2328,8 +2687,7 @@
 	})(EmailSignUpForm);
 
 /***/ },
-
-/***/ 181:
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2345,6 +2703,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _ButtonLoader = __webpack_require__(177);
 
@@ -2401,9 +2763,9 @@
 	}(_react2.default.Component);
 
 	SignOutButton.propTypes = {
-	  next: _react.PropTypes.func,
-	  children: _react.PropTypes.node,
-	  icon: _react.PropTypes.node
+	  next: _propTypes2.default.func,
+	  children: _propTypes2.default.node,
+	  icon: _propTypes2.default.node
 	};
 	SignOutButton.defaultProps = {
 	  next: function next() {},
@@ -2420,8 +2782,7 @@
 	})(SignOutButton);
 
 /***/ },
-
-/***/ 182:
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2437,6 +2798,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _Input = __webpack_require__(178);
 
@@ -2528,10 +2893,10 @@
 	}(_react2.default.Component);
 
 	RequestPasswordResetForm.propTypes = {
-	  endpoint: _react.PropTypes.string,
-	  inputProps: _react.PropTypes.shape({
-	    email: _react.PropTypes.object,
-	    submit: _react.PropTypes.object
+	  endpoint: _propTypes2.default.string,
+	  inputProps: _propTypes2.default.shape({
+	    email: _propTypes2.default.object,
+	    submit: _propTypes2.default.object
 	  })
 	};
 	RequestPasswordResetForm.defaultProps = {
@@ -2546,8 +2911,7 @@
 	})(RequestPasswordResetForm);
 
 /***/ },
-
-/***/ 183:
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2563,6 +2927,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _reactRedux = __webpack_require__(9);
 
@@ -2628,12 +2996,12 @@
 	}(_react2.default.Component);
 
 	OAuthSignInButton.propTypes = {
-	  provider: _react.PropTypes.string.isRequired,
-	  label: _react.PropTypes.string,
-	  signInParams: _react.PropTypes.object,
-	  children: _react.PropTypes.node,
-	  icon: _react.PropTypes.node,
-	  next: _react.PropTypes.func
+	  provider: _propTypes2.default.string.isRequired,
+	  label: _propTypes2.default.string,
+	  signInParams: _propTypes2.default.object,
+	  children: _propTypes2.default.node,
+	  icon: _propTypes2.default.node,
+	  next: _propTypes2.default.func
 	};
 	OAuthSignInButton.defaultProps = {
 	  signInParams: {},
@@ -2651,8 +3019,7 @@
 	})(OAuthSignInButton);
 
 /***/ },
-
-/***/ 184:
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2668,6 +3035,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _Input = __webpack_require__(178);
 
@@ -2765,10 +3136,10 @@
 	}(_react2.default.Component);
 
 	UpdatePasswordForm.propTypes = {
-	  endpoint: _react.PropTypes.string,
-	  inputProps: _react.PropTypes.shape({
-	    password: _react.PropTypes.object,
-	    passwordConfirmation: _react.PropTypes.object
+	  endpoint: _propTypes2.default.string,
+	  inputProps: _propTypes2.default.shape({
+	    password: _propTypes2.default.object,
+	    passwordConfirmation: _propTypes2.default.object
 	  })
 	};
 	UpdatePasswordForm.defaultProps = {
@@ -2783,8 +3154,7 @@
 	})(UpdatePasswordForm);
 
 /***/ },
-
-/***/ 185:
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2800,6 +3170,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 
 	var _ButtonLoader = __webpack_require__(177);
 
@@ -2854,9 +3228,9 @@
 	}(_react2.default.Component);
 
 	DestroyAccountButton.propTypes = {
-	  endpoint: _react.PropTypes.string,
-	  children: _react.PropTypes.node,
-	  icon: _react.PropTypes.node
+	  endpoint: _propTypes2.default.string,
+	  children: _propTypes2.default.node,
+	  icon: _propTypes2.default.node
 	};
 	DestroyAccountButton.defaultProps = {
 	  children: _react2.default.createElement(
@@ -2872,5 +3246,4 @@
 	})(DestroyAccountButton);
 
 /***/ }
-
-/******/ })));
+/******/ ])));

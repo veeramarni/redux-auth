@@ -1,4 +1,5 @@
-import React, { PropTypes } from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import { Modal, Button } from "semantic-ui-react";
 import ErrorList from "../ErrorList";
 import { connect } from "react-redux";

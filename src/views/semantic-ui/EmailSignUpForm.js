@@ -1,4 +1,5 @@
-import React, { PropTypes } from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import Input from "./Input";
 import { Form, Button } from "semantic-ui-react";
 import { emailSignUpFormUpdate, emailSignUp } from "../../actions/email-sign-up";
@@ -63,7 +64,7 @@ class EmailSignUpForm extends React.Component {
                errors={this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "name"])}
                onChange={this.handleInput.bind(this, "name")}
                {...this.props.inputProps.name} />
-               
+
         <Input type="text"
                label="Email"
                placeholder="Email"

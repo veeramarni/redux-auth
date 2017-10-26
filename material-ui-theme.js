@@ -2465,6 +2465,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	var _colors = __webpack_require__(121);
 
 	var Colors = _interopRequireWildcard(_colors);
@@ -2562,9 +2566,9 @@
 	}(_react2.default.Component);
 
 	AuthInput.propTypes = {
-	  label: _react.PropTypes.string,
-	  value: _react.PropTypes.string,
-	  errors: _react.PropTypes.object
+	  label: _propTypes2.default.string,
+	  value: _propTypes2.default.string,
+	  errors: _propTypes2.default.object
 	};
 	AuthInput.defaultProps = {
 	  label: "",
