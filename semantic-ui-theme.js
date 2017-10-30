@@ -2643,6 +2643,7 @@
 	          errors: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "password_confirmation"]),
 	          onChange: this.handleInput.bind(this, "password_confirmation")
 	        }, this.props.inputProps.passwordConfirmation)),
+	        this.props.additionalInputs,
 	        _react2.default.createElement(
 	          _semanticUiReact.Button,
 	          _extends({
@@ -2671,7 +2672,8 @@
 	    password: _propTypes2.default.object,
 	    passwordConfirmation: _propTypes2.default.object,
 	    submit: _propTypes2.default.object
-	  })
+	  }),
+	  additionalInputs: _propTypes2.default.element
 	};
 	EmailSignUpForm.defaultProps = {
 	  next: function next() {},
@@ -2679,7 +2681,8 @@
 	    email: {},
 	    password: {},
 	    submit: {}
-	  }
+	  },
+	  additionalInputs: {}
 	};
 	exports.default = (0, _reactRedux.connect)(function (_ref) {
 	  var auth = _ref.auth;

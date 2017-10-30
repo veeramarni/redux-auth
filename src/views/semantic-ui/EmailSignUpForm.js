@@ -14,7 +14,8 @@ class EmailSignUpForm extends React.Component {
       password: PropTypes.object,
       passwordConfirmation: PropTypes.object,
       submit: PropTypes.object
-    })
+    }),
+    additionalInputs: PropTypes.element
   };
 
   static defaultProps = {
@@ -23,7 +24,8 @@ class EmailSignUpForm extends React.Component {
       email: {},
       password: {},
       submit: {}
-    }
+    },
+    additionalInputs: {}
   };
 
   getEndpoint () {
@@ -94,6 +96,8 @@ class EmailSignUpForm extends React.Component {
                errors={this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "password_confirmation"])}
                onChange={this.handleInput.bind(this, "password_confirmation")}
                {...this.props.inputProps.passwordConfirmation} />
+
+        {this.props.additionalInputs}
 
         <Button
           fluid
