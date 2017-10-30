@@ -15,7 +15,7 @@ class EmailSignUpForm extends React.Component {
       passwordConfirmation: PropTypes.object,
       submit: PropTypes.object
     }),
-    additionalInputs: PropTypes.element
+    additionalInputs: PropTypes.object
   };
 
   static defaultProps = {
@@ -46,6 +46,21 @@ class EmailSignUpForm extends React.Component {
     this.props.dispatch(emailSignUp(formData, this.getEndpoint()))
       .then(this.props.next)
       .catch(() => {});
+  }
+
+  additionalInputs (disabled) {
+    return this.props.additionalInputs.reduce((memo, value, key) => {
+      memo.push(<Input type="text"
+        key={key}
+        label={value}
+        placeholder={value}
+        groupClassName="email-sign-up-${key}"
+        disabled={disabled}
+        value={this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", key])}
+        errors={this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", key])}
+        onChange={this.handleInput.bind(this, key)} />)
+      return memo;
+    }, []);
   }
 
   render () {
@@ -97,7 +112,7 @@ class EmailSignUpForm extends React.Component {
                onChange={this.handleInput.bind(this, "password_confirmation")}
                {...this.props.inputProps.passwordConfirmation} />
 
-        {this.props.additionalInputs}
+        {this.additionalInputs(disabled)}
 
         <Button
           fluid

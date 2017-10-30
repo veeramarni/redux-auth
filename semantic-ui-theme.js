@@ -2604,6 +2604,24 @@
 	      this.props.dispatch((0, _emailSignUp.emailSignUp)(formData, this.getEndpoint())).then(this.props.next).catch(function () {});
 	    }
 	  }, {
+	    key: "additionalInputs",
+	    value: function additionalInputs(disabled) {
+	      var _this2 = this;
+
+	      return this.props.additionalInputs.reduce(function (memo, value, key) {
+	        memo.push(_react2.default.createElement(_Input2.default, { type: "text",
+	          key: key,
+	          label: value,
+	          placeholder: value,
+	          groupClassName: "email-sign-up-${key}",
+	          disabled: disabled,
+	          value: _this2.props.auth.getIn(["emailSignUp", _this2.getEndpoint(), "form", key]),
+	          errors: _this2.props.auth.getIn(["emailSignUp", _this2.getEndpoint(), "errors", key]),
+	          onChange: _this2.handleInput.bind(_this2, key) }));
+	        return memo;
+	      }, []);
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
 	      var disabled = this.props.auth.getIn(["user", "isSignedIn"]) || this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "loading"]);
@@ -2648,7 +2666,7 @@
 	          errors: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "password_confirmation"]),
 	          onChange: this.handleInput.bind(this, "password_confirmation")
 	        }, this.props.inputProps.passwordConfirmation)),
-	        this.props.additionalInputs,
+	        this.additionalInputs(disabled),
 	        _react2.default.createElement(
 	          _semanticUiReact.Button,
 	          _extends({
@@ -2678,7 +2696,7 @@
 	    passwordConfirmation: _propTypes2.default.object,
 	    submit: _propTypes2.default.object
 	  }),
-	  additionalInputs: _propTypes2.default.element
+	  additionalInputs: _propTypes2.default.object
 	};
 	EmailSignUpForm.defaultProps = {
 	  next: function next() {},
