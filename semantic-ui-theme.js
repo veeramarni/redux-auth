@@ -2630,15 +2630,7 @@
 	        _semanticUiReact.Form,
 	        { className: "redux-auth email-sign-up-form clearfix",
 	          onSubmit: this.handleSubmit.bind(this) },
-	        _react2.default.createElement(_Input2.default, _extends({ type: "text",
-	          label: "Name",
-	          placeholder: "name",
-	          groupClassName: "email-sign-up-name",
-	          disabled: disabled,
-	          value: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "name"]),
-	          errors: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "name"]),
-	          onChange: this.handleInput.bind(this, "name")
-	        }, this.props.inputProps.name)),
+	        this.additionalInputs(disabled),
 	        _react2.default.createElement(_Input2.default, _extends({ type: "text",
 	          label: "Email",
 	          placeholder: "Email",
@@ -2666,7 +2658,6 @@
 	          errors: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "password_confirmation"]),
 	          onChange: this.handleInput.bind(this, "password_confirmation")
 	        }, this.props.inputProps.passwordConfirmation)),
-	        this.additionalInputs(disabled),
 	        _react2.default.createElement(
 	          _semanticUiReact.Button,
 	          _extends({
