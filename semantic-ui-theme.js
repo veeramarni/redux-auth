@@ -2380,7 +2380,7 @@
 	          this.props.label
 	        ),
 	        _react2.default.createElement("input", _extends({}, this.props, {
-	          bsStyle: this.props.errors.size ? "error" : null,
+	          style: this.props.errors.size ? "error" : null,
 	          onChange: this.handleInput.bind(this) })),
 	        this.renderErrorList()
 	      );
@@ -2613,9 +2613,9 @@
 	          key: key,
 	          label: value,
 	          placeholder: value,
-	          groupClassName: "email-sign-up-${key}",
+	          className: "email-sign-up-${key}",
 	          disabled: disabled,
-	          value: _this2.props.auth.getIn(["emailSignUp", _this2.getEndpoint(), "form", key]),
+	          value: _this2.props.auth.getIn(["emailSignUp", _this2.getEndpoint(), "form", key]) || '',
 	          errors: _this2.props.auth.getIn(["emailSignUp", _this2.getEndpoint(), "errors", key]),
 	          onChange: _this2.handleInput.bind(_this2, key) }));
 	        return memo;
@@ -2634,27 +2634,27 @@
 	        _react2.default.createElement(_Input2.default, _extends({ type: "text",
 	          label: "Email",
 	          placeholder: "Email",
-	          groupClassName: "email-sign-up-email",
+	          className: "email-sign-up-email",
 	          disabled: disabled,
-	          value: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "email"]),
+	          value: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "email"]) || '',
 	          errors: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "email"]),
 	          onChange: this.handleInput.bind(this, "email")
 	        }, this.props.inputProps.email)),
 	        _react2.default.createElement(_Input2.default, _extends({ type: "password",
 	          label: "Password",
 	          placeholder: "Password",
-	          groupClassName: "email-sign-up-password",
+	          className: "email-sign-up-password",
 	          disabled: disabled,
-	          value: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "password"]),
+	          value: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "password"]) || '',
 	          errors: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "password"]),
 	          onChange: this.handleInput.bind(this, "password")
 	        }, this.props.inputProps.password)),
 	        _react2.default.createElement(_Input2.default, _extends({ type: "password",
 	          label: "Password Confirmation",
 	          placeholder: "Password Confirmation",
-	          groupClassName: "email-sign-up-password-confirmation",
+	          className: "email-sign-up-password-confirmation",
 	          disabled: disabled,
-	          value: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "password_confirmation"]),
+	          value: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "password_confirmation"]) || '',
 	          errors: this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "password_confirmation"]),
 	          onChange: this.handleInput.bind(this, "password_confirmation")
 	        }, this.props.inputProps.passwordConfirmation)),
