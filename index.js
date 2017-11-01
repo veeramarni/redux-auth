@@ -2768,11 +2768,11 @@
 
 	  // if registration does not require confirmation, user will be signed in at
 	  // this point.
-	  return user.uid ? state.merge({
+	  return state.merge({
 	    attributes: user,
-	    isSignedIn: false,
+	    isSignedIn: true,
 	    endpointKey: endpoint
-	  }) : state;
+	  });
 	}), _defineProperty(_createReducer, _oauthSignIn.OAUTH_SIGN_IN_COMPLETE, function (state, _ref7) {
 	  var endpoint = _ref7.endpoint,
 	      user = _ref7.user;

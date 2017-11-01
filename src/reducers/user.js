@@ -46,13 +46,11 @@ export default createReducer(initialState, {
   [EMAIL_SIGN_UP_COMPLETE]: (state, { endpoint, user }) => {
     // if registration does not require confirmation, user will be signed in at
     // this point.
-    return (user.uid)
-      ? state.merge({
-        attributes: user,
-        isSignedIn: false,
-        endpointKey: endpoint
-      })
-      : state;
+    return state.merge({
+            attributes: user,
+            isSignedIn: true,
+            endpointKey: endpoint
+          });
   },
 
   [OAUTH_SIGN_IN_COMPLETE]: (state, { endpoint, user }) => state.merge({
