@@ -12,9 +12,7 @@ class EmailSignUpSuccessModal extends React.Component {
         closeAction={hideEmailSignUpSuccessModal}
         title="Sign Up Success">
         <p>
-          A confirmation email was sent to your account
-          at {this.props.auth.getIn(["ui", "emailSignUpAddress"])}. Follow the
-          instructions in the email to complete registration.
+          Welcome to TopicDNA
         </p>
       </Modal>
     );

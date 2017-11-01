@@ -1337,9 +1337,7 @@
 	        _react2.default.createElement(
 	          "p",
 	          null,
-	          "A confirmation email was sent to your account at ",
-	          this.props.auth.getIn(["ui", "emailSignUpAddress"]),
-	          ". Follow the instructions in the email to complete registration."
+	          "Welcome to TopicDNA"
 	        )
 	      );
 	    }
