@@ -2241,11 +2241,11 @@
 	          loading: this.props.loading,
 	          onClick: this.props.onClick,
 	          disabled: this.props.disabled || this.props.loading,
-	          bsStyle: this.props.bsStyle,
 	          className: this.props.className,
-	          type: this.props.type,
 	          style: this.props.style,
-	          bsSize: this.props.bsSize },
+	          type: this.props.type,
+	          color: this.props.color,
+	          size: this.props.size },
 	        this.props.children
 	      );
 	    }
@@ -2476,20 +2476,18 @@
 	        { className: "redux-auth email-sign-in-form clearfix",
 	          onSubmit: this.handleSubmit.bind(this) },
 	        _react2.default.createElement(_Input2.default, _extends({ type: "text",
-	          groupClassName: "email-sign-in-email",
 	          label: "Email",
 	          placeholder: "Email",
 	          disabled: disabled,
-	          value: this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "email"]),
+	          value: this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "email"]) || '',
 	          errors: this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "errors", "email"]),
 	          onChange: this.handleInput.bind(this, "email")
 	        }, this.props.inputProps.email)),
 	        _react2.default.createElement(_Input2.default, _extends({ type: "password",
 	          label: "Password",
-	          groupClassName: "email-sign-in-password",
 	          placeholder: "Password",
 	          disabled: disabled,
-	          value: this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "password"]),
+	          value: this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "password"]) || '',
 	          errors: this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "errors", "password"]),
 	          onChange: this.handleInput.bind(this, "password")
 	        }, this.props.inputProps.password)),

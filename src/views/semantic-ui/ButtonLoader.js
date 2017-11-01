@@ -35,11 +35,11 @@ class ButtonLoader extends React.Component {
         loading={this.props.loading}
         onClick={this.props.onClick}
         disabled={this.props.disabled || this.props.loading}
-        bsStyle={this.props.bsStyle}
         className={this.props.className}
-        type={this.props.type}
         style={this.props.style}
-        bsSize={this.props.bsSize}>
+        type={this.props.type}
+        color={this.props.color}
+        size={this.props.size}>
         {this.props.children}
       </Button>
     );

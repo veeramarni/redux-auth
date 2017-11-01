@@ -55,21 +55,19 @@ class EmailSignInForm extends React.Component {
       <Form className='redux-auth email-sign-in-form clearfix'
             onSubmit={this.handleSubmit.bind(this)}>
         <Input type="text"
-               groupClassName="email-sign-in-email"
                label="Email"
                placeholder="Email"
                disabled={disabled}
-               value={this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "email"])}
+               value={this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "email"]) || ''}
                errors={this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "errors", "email"])}
                onChange={this.handleInput.bind(this, "email")}
                {...this.props.inputProps.email} />
 
         <Input type="password"
                label="Password"
-               groupClassName="email-sign-in-password"
                placeholder="Password"
                disabled={disabled}
-               value={this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "password"])}
+               value={this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "form", "password"]) || ''}
                errors={this.props.auth.getIn(["emailSignIn", this.getEndpoint(), "errors", "password"])}
                onChange={this.handleInput.bind(this, "password")}
                {...this.props.inputProps.password} />
