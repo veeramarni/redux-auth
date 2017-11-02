@@ -2235,19 +2235,19 @@
 	  _createClass(ButtonLoader, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
-	        _semanticUiReact.Button,
-	        {
-	          loading: this.props.loading,
-	          onClick: this.props.onClick,
-	          disabled: this.props.disabled || this.props.loading,
-	          className: this.props.className,
-	          style: this.props.style,
-	          type: this.props.type,
-	          color: this.props.color,
-	          size: this.props.size },
-	        this.props.children
-	      );
+	      return _react2.default.createElement(_semanticUiReact.Button, {
+	        circular: this.props.circular,
+	        color: this.props.color,
+	        icon: this.props.icon,
+	        loading: this.props.loading,
+	        onClick: this.props.onClick,
+	        disabled: this.props.disabled || this.props.loading,
+	        className: this.props.className,
+	        style: this.props.style,
+	        type: this.props.type,
+	        size: this.props.size,
+	        content: this.props.content
+	      });
 	    }
 	  }]);
 
@@ -2274,11 +2274,6 @@
 	  },
 	  spinColorDark: "#444",
 	  spinColorLight: "#fff",
-	  children: _react2.default.createElement(
-	    'span',
-	    null,
-	    'Submit'
-	  ),
 	  style: {}
 	};
 	exports.default = ButtonLoader;
@@ -2996,8 +2991,7 @@
 	      var loading = this.props.auth.getIn(["ui", "oAuthSignInLoadingProvider"]) === this.props.provider && this.props.auth.getIn(["oAuthSignIn", this.getEndpoint(), "loading"]);
 
 	      return _react2.default.createElement(_ButtonLoader2.default, _extends({
-	        loading: loading,
-	        icon: this.props.icon,
+	        loading: this.props.loading || loading,
 	        className: this.props.className + ' oauth-sign-in-submit',
 	        disabled: disabled,
 	        onClick: this.handleClick.bind(this)
@@ -3012,18 +3006,12 @@
 	  provider: _propTypes2.default.string.isRequired,
 	  label: _propTypes2.default.string,
 	  signInParams: _propTypes2.default.object,
-	  children: _propTypes2.default.node,
+	  content: _propTypes2.default.node,
 	  icon: _propTypes2.default.node,
 	  next: _propTypes2.default.func
 	};
 	OAuthSignInButton.defaultProps = {
 	  signInParams: {},
-	  children: _react2.default.createElement(
-	    "span",
-	    null,
-	    "OAuth Sign In"
-	  ),
-	  icon: _react2.default.createElement(_semanticUiReact.Icon, { name: "sign in" }),
 	  next: function next() {}
 	};
 	exports.default = (0, _reactRedux.connect)(function (_ref) {

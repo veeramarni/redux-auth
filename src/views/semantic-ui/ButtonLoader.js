@@ -25,22 +25,24 @@ class ButtonLoader extends React.Component {
     },
     spinColorDark: "#444",
     spinColorLight: "#fff",
-    children: <span>Submit</span>,
     style: {}
   };
 
   render () {
     return (
       <Button
+        circular={this.props.circular}
+        color={this.props.color}
+        icon={this.props.icon}
         loading={this.props.loading}
         onClick={this.props.onClick}
         disabled={this.props.disabled || this.props.loading}
         className={this.props.className}
         style={this.props.style}
         type={this.props.type}
-        color={this.props.color}
-        size={this.props.size}>
-        {this.props.children}
+        size={this.props.size}
+        content={this.props.content}
+      >
       </Button>
     );
   }

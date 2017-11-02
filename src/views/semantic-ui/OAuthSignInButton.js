@@ -13,15 +13,13 @@ class OAuthSignInButton extends React.Component {
     provider: PropTypes.string.isRequired,
     label: PropTypes.string,
     signInParams: PropTypes.object,
-    children: PropTypes.node,
+    content: PropTypes.node,
     icon: PropTypes.node,
     next: PropTypes.func
   };
 
   static defaultProps = {
     signInParams: {},
-    children: <span>OAuth Sign In</span>,
-    icon: <Icon name="sign in" />,
     next: () => {}
   };
 
@@ -52,8 +50,7 @@ class OAuthSignInButton extends React.Component {
 
     return (
       <ButtonLoader
-        loading={loading}
-        icon={this.props.icon}
+        loading={this.props.loading || loading}
         className={this.props.className + ' oauth-sign-in-submit'}
         disabled={disabled}
         onClick={this.handleClick.bind(this)}
