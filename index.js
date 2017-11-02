@@ -2149,7 +2149,11 @@
 	    if (creds && creds.uid) {
 	      popup.close();
 	      (0, _sessionStorage.persistData)(C.SAVED_CREDS_KEY, (0, _parseUrl.normalizeTokenKeys)(creds));
-	      (0, _fetch2.default)((0, _sessionStorage.getTokenValidationPath)(endpointKey)).then(_handleFetchResponse.parseResponse).then(function (_ref) {
+	      var currentCreds = (0, _sessionStorage.retrieveData)(C.SAVED_CREDS_KEY);
+	      var resourceClass = currentCreds["resource_class"];
+
+	      // fetch(getTokenValidationPath(endpointKey))
+	      (0, _fetch2.default)((0, _sessionStorage.getTokenValidationPath)(endpointKey) + "?resource_class=" + resourceClass).then(_handleFetchResponse.parseResponse).then(function (_ref) {
 	        var data = _ref.data;
 	        return resolve(data);
 	      }).catch(function (_ref2) {
