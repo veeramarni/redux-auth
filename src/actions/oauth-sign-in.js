@@ -39,7 +39,6 @@ function listenForCredentials (endpointKey, popup, provider, resolve, reject) {
       let currentCreds = retrieveData(C.SAVED_CREDS_KEY);
       let resourceClass = currentCreds["resource_class"];
 
-      // fetch(getTokenValidationPath(endpointKey))
       fetch(`${getTokenValidationPath(endpointKey)}?resource_class=${resourceClass}`)
         .then(parseResponse)
         .then(({data}) => resolve(data))

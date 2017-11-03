@@ -999,8 +999,11 @@
 	      });
 	    });
 	  } else if (savedCreds) {
+	    // retrieve exisiting resource type from local storage
+	    var resourceClass = savedCreds["resource_class"];
+
 	    // verify session credentials with API
-	    return (0, _fetch2.default)("" + (0, _sessionStorage.getApiUrl)(currentEndpointKey) + currentEndpoint[currentEndpointKey].tokenValidationPath).then(function (response) {
+	    return (0, _fetch2.default)("" + (0, _sessionStorage.getApiUrl)(currentEndpointKey) + currentEndpoint[currentEndpointKey].tokenValidationPath + "?resource_class=" + resourceClass).then(function (response) {
 	      return (0, _handleFetchResponse.parseResponse)(response, function () {
 	        return (0, _sessionStorage.removeData)(C.SAVED_CREDS_KEY);
 	      }).then(function (_ref3) {
@@ -2152,7 +2155,6 @@
 	      var currentCreds = (0, _sessionStorage.retrieveData)(C.SAVED_CREDS_KEY);
 	      var resourceClass = currentCreds["resource_class"];
 
-	      // fetch(getTokenValidationPath(endpointKey))
 	      (0, _fetch2.default)((0, _sessionStorage.getTokenValidationPath)(endpointKey) + "?resource_class=" + resourceClass).then(_handleFetchResponse.parseResponse).then(function (_ref) {
 	        var data = _ref.data;
 	        return resolve(data);

@@ -105,8 +105,11 @@ export function applyConfig({dispatch, endpoint={}, settings={}, reset=false}={}
                                .then(({data}) => (data));
     });
   } else if (savedCreds) {
+    // retrieve exisiting resource type from local storage
+    let resourceClass = savedCreds["resource_class"];
+
     // verify session credentials with API
-    return fetch(`${getApiUrl(currentEndpointKey)}${currentEndpoint[currentEndpointKey].tokenValidationPath}`)
+    return fetch(`${getApiUrl(currentEndpointKey)}${currentEndpoint[currentEndpointKey].tokenValidationPath}?resource_class=${resourceClass}`)
     .then(response => {
           return parseResponse(response,
                                () => (removeData(C.SAVED_CREDS_KEY)))
