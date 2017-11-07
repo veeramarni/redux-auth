@@ -2987,7 +2987,7 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var disabled = this.props.auth.getIn(["user", "isSignedIn"]);
+	      var disabled = this.props.disabled || this.props.auth.getIn(["user", "isSignedIn"]);
 	      var loading = this.props.auth.getIn(["ui", "oAuthSignInLoadingProvider"]) === this.props.provider && this.props.auth.getIn(["oAuthSignIn", this.getEndpoint(), "loading"]);
 
 	      return _react2.default.createElement(_ButtonLoader2.default, _extends({
@@ -3005,6 +3005,7 @@
 	OAuthSignInButton.propTypes = {
 	  provider: _propTypes2.default.string.isRequired,
 	  label: _propTypes2.default.string,
+	  disabled: _propTypes2.default.bool,
 	  signInParams: _propTypes2.default.object,
 	  content: _propTypes2.default.node,
 	  icon: _propTypes2.default.node,

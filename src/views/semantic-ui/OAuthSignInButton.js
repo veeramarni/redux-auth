@@ -12,6 +12,7 @@ class OAuthSignInButton extends React.Component {
   static propTypes = {
     provider: PropTypes.string.isRequired,
     label: PropTypes.string,
+    disabled: PropTypes.bool,
     signInParams: PropTypes.object,
     content: PropTypes.node,
     icon: PropTypes.node,
@@ -42,7 +43,7 @@ class OAuthSignInButton extends React.Component {
   }
 
   render () {
-    let disabled = this.props.auth.getIn(["user", "isSignedIn"]);
+    let disabled = this.props.disabled || this.props.auth.getIn(["user", "isSignedIn"]);
     let loading = (
       (this.props.auth.getIn(["ui", "oAuthSignInLoadingProvider"]) === this.props.provider) &&
       this.props.auth.getIn(["oAuthSignIn", this.getEndpoint(), "loading"])
