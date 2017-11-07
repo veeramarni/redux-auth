@@ -2929,12 +2929,6 @@
 	  return state.set("signOutSuccessModalVisible", false);
 	}), _defineProperty(_createReducer, uiActions.HIDE_SIGN_OUT_ERROR_MODAL, function (state) {
 	  return state.set("signOutErrorModalVisible", false);
-	}), _defineProperty(_createReducer, emailSignUpActions.EMAIL_SIGN_UP_COMPLETE, function (state, _ref2) {
-	  var user = _ref2.user;
-	  return state.merge({
-	    emailSignUpSuccessModalVisible: true,
-	    emailSignUpAddress: user.email
-	  });
 	}), _defineProperty(_createReducer, emailSignUpActions.EMAIL_SIGN_UP_ERROR, function (state) {
 	  return state.set("emailSignUpErrorModalVisible", true);
 	}), _defineProperty(_createReducer, uiActions.HIDE_EMAIL_SIGN_UP_SUCCESS_MODAL, function (state) {
@@ -2960,8 +2954,8 @@
 	  return state.set("passwordResetErrorModalVisible", false);
 	}), _defineProperty(_createReducer, uiActions.SHOW_PASSWORD_RESET_ERROR_MODAL, function (state) {
 	  return state.set("passwordResetErrorModalVisible", true);
-	}), _defineProperty(_createReducer, requestPasswordResetActions.REQUEST_PASSWORD_RESET_COMPLETE, function (state, _ref3) {
-	  var message = _ref3.message;
+	}), _defineProperty(_createReducer, requestPasswordResetActions.REQUEST_PASSWORD_RESET_COMPLETE, function (state, _ref2) {
+	  var message = _ref2.message;
 
 	  return state.merge({
 	    requestPasswordResetSuccessModalVisible: true,
@@ -2988,8 +2982,8 @@
 	  return state.set("updatePasswordSuccessModalVisible", false);
 	}), _defineProperty(_createReducer, uiActions.HIDE_UPDATE_PASSWORD_ERROR_MODAL, function (state) {
 	  return state.set("updatePasswordErrorModalVisible", false);
-	}), _defineProperty(_createReducer, destroyAccountActions.DESTROY_ACCOUNT_COMPLETE, function (state, _ref4) {
-	  var message = _ref4.message;
+	}), _defineProperty(_createReducer, destroyAccountActions.DESTROY_ACCOUNT_COMPLETE, function (state, _ref3) {
+	  var message = _ref3.message;
 	  return state.merge({
 	    destroyAccountSuccessModalVisible: true,
 	    destroyAccountMessage: message
@@ -3003,9 +2997,9 @@
 	  });
 	}), _defineProperty(_createReducer, uiActions.HIDE_DESTROY_ACCOUNT_ERROR_MODAL, function (state) {
 	  return state.set("destroyAccountErrorModalVisible", false);
-	}), _defineProperty(_createReducer, serverActions.SS_AUTH_TOKEN_UPDATE, function (state, _ref5) {
-	  var mustResetPassword = _ref5.mustResetPassword,
-	      firstTimeLogin = _ref5.firstTimeLogin;
+	}), _defineProperty(_createReducer, serverActions.SS_AUTH_TOKEN_UPDATE, function (state, _ref4) {
+	  var mustResetPassword = _ref4.mustResetPassword,
+	      firstTimeLogin = _ref4.firstTimeLogin;
 	  return state.merge({
 	    passwordResetSuccessModalVisible: mustResetPassword,
 	    firstTimeLoginSuccessModalVisible: firstTimeLogin

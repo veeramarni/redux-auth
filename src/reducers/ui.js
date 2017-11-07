@@ -82,10 +82,10 @@ export default createReducer(initialState, {
     "signOutErrorModalVisible", false
   ),
 
-  [emailSignUpActions.EMAIL_SIGN_UP_COMPLETE]: (state, {user}) => state.merge({
-    emailSignUpSuccessModalVisible: true,
-    emailSignUpAddress: user.email
-  }),
+  // [emailSignUpActions.EMAIL_SIGN_UP_COMPLETE]: (state, {user}) => state.merge({
+  //   emailSignUpSuccessModalVisible: true,
+  //   emailSignUpAddress: user.email
+  // }),
 
   [emailSignUpActions.EMAIL_SIGN_UP_ERROR]: state => state.set(
     "emailSignUpErrorModalVisible", true
