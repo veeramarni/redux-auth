@@ -382,6 +382,8 @@
 
 	var _verifyAuth3 = _interopRequireDefault(_verifyAuth2);
 
+	var _handleFetchResponse = __webpack_require__(84);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	/* reducers */

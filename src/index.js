@@ -70,3 +70,4 @@ export {
 
 /* utils */
 export {default as fetch} from "./utils/fetch";
+import {parseResponse} from "./utils/handle-fetch-response";
