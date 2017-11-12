@@ -51,7 +51,7 @@
 	});
 	exports.fetch = exports.hideDestroyAccountErrorModal = exports.hideDestroyAccountSuccessModal = exports.hideUpdatePasswordErrorModal = exports.hideUpdatePasswordSuccessModal = exports.hidePasswordResetRequestErrorModal = exports.hidePasswordResetRequestSuccessModal = exports.hidePasswordResetErrorModal = exports.hideFirstTimeLoginErrorModal = exports.showPasswordResetErrorModal = exports.showFirstTimeLoginErrorModal = exports.hidePasswordResetSuccessModal = exports.hideFirstTimeLoginSuccessModal = exports.showPasswordResetSuccessModal = exports.showFirstTimeLoginSuccessModal = exports.hideEmailSignUpErrorModal = exports.hideEmailSignUpSuccessModal = exports.hideSignOutErrorModal = exports.hideSignOutSuccessModal = exports.hideOAuthSignInErrorModal = exports.hideOAuthSignInSuccessModal = exports.hideEmailSignInErrorModal = exports.hideEmailSignInSuccessModal = exports.getApiUrl = exports.verifyAuth = exports.destroyAccount = exports.updatePasswordModalFormUpdate = exports.updatePasswordModal = exports.updatePasswordFormUpdate = exports.updatePassword = exports.requestPasswordResetFormUpdate = exports.requestPasswordReset = exports.oAuthSignIn = exports.emailSignUpFormUpdate = exports.emailSignUp = exports.signOut = exports.emailSignInFormUpdate = exports.emailSignIn = exports.authenticate = exports.configure = exports.authStateReducer = undefined;
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	Object.defineProperty(exports, "configure", {
 	  enumerable: true,
@@ -60,7 +60,7 @@
 	  }
 	});
 
-	var _authenticate = __webpack_require__(70);
+	var _authenticate = __webpack_require__(75);
 
 	Object.defineProperty(exports, "authenticate", {
 	  enumerable: true,
@@ -69,7 +69,7 @@
 	  }
 	});
 
-	var _emailSignIn = __webpack_require__(86);
+	var _emailSignIn = __webpack_require__(92);
 
 	Object.defineProperty(exports, "emailSignIn", {
 	  enumerable: true,
@@ -84,7 +84,7 @@
 	  }
 	});
 
-	var _signOut = __webpack_require__(88);
+	var _signOut = __webpack_require__(93);
 
 	Object.defineProperty(exports, "signOut", {
 	  enumerable: true,
@@ -93,7 +93,7 @@
 	  }
 	});
 
-	var _emailSignUp = __webpack_require__(89);
+	var _emailSignUp = __webpack_require__(94);
 
 	Object.defineProperty(exports, "emailSignUp", {
 	  enumerable: true,
@@ -108,7 +108,7 @@
 	  }
 	});
 
-	var _oauthSignIn = __webpack_require__(90);
+	var _oauthSignIn = __webpack_require__(95);
 
 	Object.defineProperty(exports, "oAuthSignIn", {
 	  enumerable: true,
@@ -117,7 +117,7 @@
 	  }
 	});
 
-	var _requestPasswordReset = __webpack_require__(92);
+	var _requestPasswordReset = __webpack_require__(97);
 
 	Object.defineProperty(exports, "requestPasswordReset", {
 	  enumerable: true,
@@ -132,7 +132,7 @@
 	  }
 	});
 
-	var _updatePassword = __webpack_require__(93);
+	var _updatePassword = __webpack_require__(98);
 
 	Object.defineProperty(exports, "updatePassword", {
 	  enumerable: true,
@@ -147,7 +147,7 @@
 	  }
 	});
 
-	var _updatePasswordModal = __webpack_require__(94);
+	var _updatePasswordModal = __webpack_require__(99);
 
 	Object.defineProperty(exports, "updatePasswordModal", {
 	  enumerable: true,
@@ -162,7 +162,7 @@
 	  }
 	});
 
-	var _destroyAccount = __webpack_require__(95);
+	var _destroyAccount = __webpack_require__(100);
 
 	Object.defineProperty(exports, "destroyAccount", {
 	  enumerable: true,
@@ -171,7 +171,7 @@
 	  }
 	});
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
 	Object.defineProperty(exports, "getApiUrl", {
 	  enumerable: true,
@@ -180,7 +180,7 @@
 	  }
 	});
 
-	var _ui = __webpack_require__(71);
+	var _ui = __webpack_require__(76);
 
 	Object.defineProperty(exports, "hideEmailSignInSuccessModal", {
 	  enumerable: true,
@@ -315,7 +315,7 @@
 	  }
 	});
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	Object.defineProperty(exports, "fetch", {
 	  enumerable: true,
@@ -324,63 +324,65 @@
 	  }
 	});
 
-	var _authenticate2 = __webpack_require__(96);
+	var _authenticate2 = __webpack_require__(101);
 
 	var _authenticate3 = _interopRequireDefault(_authenticate2);
 
-	var _configure2 = __webpack_require__(98);
+	var _configure2 = __webpack_require__(103);
 
 	var _configure3 = _interopRequireDefault(_configure2);
 
-	var _user = __webpack_require__(99);
+	var _user = __webpack_require__(104);
 
 	var _user2 = _interopRequireDefault(_user);
 
-	var _ui2 = __webpack_require__(100);
+	var _ui2 = __webpack_require__(105);
 
 	var _ui3 = _interopRequireDefault(_ui2);
 
-	var _emailSignIn2 = __webpack_require__(101);
+	var _emailSignIn2 = __webpack_require__(106);
 
 	var _emailSignIn3 = _interopRequireDefault(_emailSignIn2);
 
-	var _emailSignUp2 = __webpack_require__(102);
+	var _emailSignUp2 = __webpack_require__(107);
 
 	var _emailSignUp3 = _interopRequireDefault(_emailSignUp2);
 
-	var _oauthSignIn2 = __webpack_require__(103);
+	var _oauthSignIn2 = __webpack_require__(108);
 
 	var _oauthSignIn3 = _interopRequireDefault(_oauthSignIn2);
 
-	var _requestPasswordReset2 = __webpack_require__(104);
+	var _requestPasswordReset2 = __webpack_require__(109);
 
 	var _requestPasswordReset3 = _interopRequireDefault(_requestPasswordReset2);
 
-	var _updatePassword2 = __webpack_require__(105);
+	var _updatePassword2 = __webpack_require__(110);
 
 	var _updatePassword3 = _interopRequireDefault(_updatePassword2);
 
-	var _updatePasswordModal2 = __webpack_require__(106);
+	var _updatePasswordModal2 = __webpack_require__(111);
 
 	var _updatePasswordModal3 = _interopRequireDefault(_updatePasswordModal2);
 
-	var _server = __webpack_require__(107);
+	var _server = __webpack_require__(112);
 
 	var _server2 = _interopRequireDefault(_server);
 
-	var _signOut2 = __webpack_require__(108);
+	var _signOut2 = __webpack_require__(113);
 
 	var _signOut3 = _interopRequireDefault(_signOut2);
 
-	var _destroyAccount2 = __webpack_require__(109);
+	var _destroyAccount2 = __webpack_require__(114);
 
 	var _destroyAccount3 = _interopRequireDefault(_destroyAccount2);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _verifyAuth2 = __webpack_require__(79);
+	var _verifyAuth2 = __webpack_require__(85);
 
 	var _verifyAuth3 = _interopRequireDefault(_verifyAuth2);
+
+	var _handleFetchResponse = __webpack_require__(84);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -413,17 +415,17 @@
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = require("immutable");
 
 /***/ },
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
 /* 15 */,
 /* 16 */,
 /* 17 */,
@@ -468,21 +470,26 @@
 /* 56 */,
 /* 57 */,
 /* 58 */,
-/* 59 */
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = require("extend");
 
 /***/ },
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
 /* 65 */,
 /* 66 */,
 /* 67 */,
-/* 68 */
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -495,33 +502,33 @@
 	exports.storeCurrentEndpointKey = storeCurrentEndpointKey;
 	exports.configure = configure;
 
-	var _extend = __webpack_require__(59);
+	var _extend = __webpack_require__(64);
 
 	var _extend2 = _interopRequireDefault(_extend);
 
-	var _constants = __webpack_require__(69);
+	var _constants = __webpack_require__(74);
 
 	var C = _interopRequireWildcard(_constants);
 
-	var _authenticate = __webpack_require__(70);
+	var _authenticate = __webpack_require__(75);
 
-	var _ui = __webpack_require__(71);
+	var _ui = __webpack_require__(76);
 
-	var _server = __webpack_require__(72);
+	var _server = __webpack_require__(77);
 
-	var _clientSettings = __webpack_require__(73);
+	var _clientSettings = __webpack_require__(78);
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _verifyAuth = __webpack_require__(79);
+	var _verifyAuth = __webpack_require__(85);
 
 	var _verifyAuth2 = _interopRequireDefault(_verifyAuth);
 
-	var _parseUrl = __webpack_require__(81);
+	var _parseUrl = __webpack_require__(87);
 
 	var _parseUrl2 = _interopRequireDefault(_parseUrl);
 
-	var _reactRouterRedux = __webpack_require__(85);
+	var _reactRouterRedux = __webpack_require__(91);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -622,7 +629,7 @@
 	        }
 	      } else {
 	        mustResetPassword = authRedirectHeaders && authRedirectHeaders.reset_password;
-	        firstTimeLogin = authRedirectHeaders && authRedirectHeaders.first_time_login;
+	        firstTimeLogin = authRedirectHeaders && authRedirectHeaders.account_confirmation_success;
 	      }
 
 	      if (authRedirectLocation) {
@@ -674,7 +681,7 @@
 	}
 
 /***/ },
-/* 69 */
+/* 74 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -688,7 +695,7 @@
 	var SAVED_CREDS_KEY = exports.SAVED_CREDS_KEY = "authHeaders";
 
 /***/ },
-/* 70 */
+/* 75 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -714,7 +721,7 @@
 	}
 
 /***/ },
-/* 71 */
+/* 76 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -835,7 +842,7 @@
 	}
 
 /***/ },
-/* 72 */
+/* 77 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -857,7 +864,7 @@
 	}
 
 /***/ },
-/* 73 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -867,25 +874,27 @@
 	});
 	exports.applyConfig = applyConfig;
 
-	var _constants = __webpack_require__(69);
+	var _constants = __webpack_require__(74);
 
 	var C = _interopRequireWildcard(_constants);
 
-	var _extend = __webpack_require__(59);
+	var _extend = __webpack_require__(64);
 
 	var _extend2 = _interopRequireDefault(_extend);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
-	var _parseEndpointConfig2 = __webpack_require__(78);
+	var _parseEndpointConfig2 = __webpack_require__(83);
 
 	var _parseEndpointConfig3 = _interopRequireDefault(_parseEndpointConfig2);
 
-	var _configure = __webpack_require__(68);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _sessionStorage = __webpack_require__(76);
+	var _configure = __webpack_require__(73);
+
+	var _sessionStorage = __webpack_require__(81);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -981,23 +990,28 @@
 
 	  if ((0, _sessionStorage.getCurrentSettings)().initialCredentials) {
 	    // skip initial headers check (i.e. check was already done server-side)
-	    var _getCurrentSettings$i = (0, _sessionStorage.getCurrentSettings)().initialCredentials,
-	        user = _getCurrentSettings$i.user,
-	        headers = _getCurrentSettings$i.headers;
-
+	    var headers = (0, _sessionStorage.getCurrentSettings)().initialCredentials;
 	    (0, _sessionStorage.persistData)(C.SAVED_CREDS_KEY, headers);
-	    return Promise.resolve(user);
-	  } else if (savedCreds) {
-	    // verify session credentials with API
 	    return (0, _fetch2.default)("" + (0, _sessionStorage.getApiUrl)(currentEndpointKey) + currentEndpoint[currentEndpointKey].tokenValidationPath).then(function (response) {
-	      if (response.status >= 200 && response.status < 300) {
-	        return response.json().then(function (_ref2) {
-	          var data = _ref2.data;
-	          return data;
-	        });
-	      }
-	      (0, _sessionStorage.removeData)(C.SAVED_CREDS_KEY);
-	      return Promise.reject({ reason: "No credentials." });
+	      return (0, _handleFetchResponse.parseResponse)(response, function () {
+	        return (0, _sessionStorage.removeData)(C.SAVED_CREDS_KEY);
+	      }).then(function (_ref2) {
+	        var data = _ref2.data;
+	        return data;
+	      });
+	    });
+	  } else if (savedCreds) {
+	    // retrieve exisiting resource type from local storage
+	    var resourceClass = savedCreds["resource_class"];
+
+	    // verify session credentials with API
+	    return (0, _fetch2.default)("" + (0, _sessionStorage.getApiUrl)(currentEndpointKey) + currentEndpoint[currentEndpointKey].tokenValidationPath + "?resource_class=" + resourceClass).then(function (response) {
+	      return (0, _handleFetchResponse.parseResponse)(response, function () {
+	        return (0, _sessionStorage.removeData)(C.SAVED_CREDS_KEY);
+	      }).then(function (_ref3) {
+	        var data = _ref3.data;
+	        return data;
+	      });
 	    });
 	  } else {
 	    return Promise.reject({ reason: "No credentials." });
@@ -1005,7 +1019,7 @@
 	}
 
 /***/ },
-/* 74 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1027,19 +1041,19 @@
 	  });
 	};
 
-	var _isomorphicFetch = __webpack_require__(75);
+	var _isomorphicFetch = __webpack_require__(80);
 
 	var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 
-	var _constants = __webpack_require__(69);
+	var _constants = __webpack_require__(74);
 
 	var C = _interopRequireWildcard(_constants);
 
-	var _extend = __webpack_require__(59);
+	var _extend = __webpack_require__(64);
 
 	var _extend2 = _interopRequireDefault(_extend);
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -1111,13 +1125,13 @@
 	}
 
 /***/ },
-/* 75 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = require("isomorphic-fetch");
 
 /***/ },
-/* 76 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1154,11 +1168,11 @@
 	exports.persistData = persistData;
 	exports.retrieveData = retrieveData;
 
-	var _browserCookies = __webpack_require__(77);
+	var _browserCookies = __webpack_require__(82);
 
 	var _browserCookies2 = _interopRequireDefault(_browserCookies);
 
-	var _constants = __webpack_require__(69);
+	var _constants = __webpack_require__(74);
 
 	var C = _interopRequireWildcard(_constants);
 
@@ -1376,13 +1390,13 @@
 	};
 
 /***/ },
-/* 77 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = require("browser-cookies");
 
 /***/ },
-/* 78 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1392,11 +1406,11 @@
 	});
 	exports.default = parseEndpointConfig;
 
-	var _constants = __webpack_require__(69);
+	var _constants = __webpack_require__(74);
 
 	var C = _interopRequireWildcard(_constants);
 
-	var _extend = __webpack_require__(59);
+	var _extend = __webpack_require__(64);
 
 	var _extend2 = _interopRequireDefault(_extend);
 
@@ -1465,7 +1479,30 @@
 	}
 
 /***/ },
-/* 79 */
+/* 84 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.parseResponse = parseResponse;
+	function parseResponse(response) {
+	  var cb = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+
+	  var json = response.json();
+	  if (response.status >= 200 && response.status < 300) {
+	    return json;
+	  } else {
+	    return json.then(function (err) {
+	      return Promise.reject(err);
+	    });
+	  }
+	}
+
+/***/ },
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1478,29 +1515,29 @@
 
 	exports.fetchToken = fetchToken;
 
-	var _isomorphicFetch = __webpack_require__(75);
+	var _isomorphicFetch = __webpack_require__(80);
 
 	var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 
-	var _cookie = __webpack_require__(80);
+	var _cookie = __webpack_require__(86);
 
 	var _cookie2 = _interopRequireDefault(_cookie);
 
-	var _parseUrl = __webpack_require__(81);
+	var _parseUrl = __webpack_require__(87);
 
 	var _parseUrl2 = _interopRequireDefault(_parseUrl);
 
-	var _constants = __webpack_require__(69);
+	var _constants = __webpack_require__(74);
 
 	var C = _interopRequireWildcard(_constants);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
-	var _parseEndpointConfig3 = __webpack_require__(78);
+	var _parseEndpointConfig3 = __webpack_require__(83);
 
 	var _parseEndpointConfig4 = _interopRequireDefault(_parseEndpointConfig3);
 
-	var _url = __webpack_require__(84);
+	var _url = __webpack_require__(90);
 
 	var _url2 = _interopRequireDefault(_url);
 
@@ -1657,13 +1694,13 @@
 	exports.default = verifyAuth;
 
 /***/ },
-/* 80 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = require("cookie");
 
 /***/ },
-/* 81 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1678,15 +1715,15 @@
 	exports.getAllParams = getAllParams;
 	exports.default = getRedirectInfo;
 
-	var _querystring = __webpack_require__(82);
+	var _querystring = __webpack_require__(88);
 
 	var _querystring2 = _interopRequireDefault(_querystring);
 
-	var _extend = __webpack_require__(59);
+	var _extend = __webpack_require__(64);
 
 	var _extend2 = _interopRequireDefault(_extend);
 
-	var _history = __webpack_require__(83);
+	var _history = __webpack_require__(89);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1826,31 +1863,31 @@
 	}
 
 /***/ },
-/* 82 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = require("querystring");
 
 /***/ },
-/* 83 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = require("history");
 
 /***/ },
-/* 84 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = require("url");
 
 /***/ },
-/* 85 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-router-redux");
 
 /***/ },
-/* 86 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1865,13 +1902,13 @@
 	exports.emailSignInError = emailSignInError;
 	exports.emailSignIn = emailSignIn;
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -1926,28 +1963,7 @@
 	}
 
 /***/ },
-/* 87 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.parseResponse = parseResponse;
-	function parseResponse(response) {
-	  var json = response.json();
-	  if (response.status >= 200 && response.status < 300) {
-	    return json;
-	  } else {
-	    return json.then(function (err) {
-	      return Promise.reject(err);
-	    });
-	  }
-	}
-
-/***/ },
-/* 88 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1961,13 +1977,13 @@
 	exports.signOutError = signOutError;
 	exports.signOut = signOut;
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -2006,7 +2022,7 @@
 	}
 
 /***/ },
-/* 89 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2021,15 +2037,15 @@
 	exports.emailSignUpError = emailSignUpError;
 	exports.emailSignUp = emailSignUp;
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _extend = __webpack_require__(59);
+	var _extend = __webpack_require__(64);
 
 	var _extend2 = _interopRequireDefault(_extend);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -2078,7 +2094,7 @@
 	}
 
 /***/ },
-/* 90 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2092,23 +2108,23 @@
 	exports.oAuthSignInError = oAuthSignInError;
 	exports.oAuthSignIn = oAuthSignIn;
 
-	var _constants = __webpack_require__(69);
+	var _constants = __webpack_require__(74);
 
 	var C = _interopRequireWildcard(_constants);
 
-	var _parseUrl = __webpack_require__(81);
+	var _parseUrl = __webpack_require__(87);
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
-	var _popup = __webpack_require__(91);
+	var _popup = __webpack_require__(96);
 
 	var _popup2 = _interopRequireDefault(_popup);
 
@@ -2138,7 +2154,10 @@
 	    if (creds && creds.uid) {
 	      popup.close();
 	      (0, _sessionStorage.persistData)(C.SAVED_CREDS_KEY, (0, _parseUrl.normalizeTokenKeys)(creds));
-	      (0, _fetch2.default)((0, _sessionStorage.getTokenValidationPath)(endpointKey)).then(_handleFetchResponse.parseResponse).then(function (_ref) {
+	      var currentCreds = (0, _sessionStorage.retrieveData)(C.SAVED_CREDS_KEY);
+	      var resourceClass = currentCreds["resource_class"];
+
+	      (0, _fetch2.default)((0, _sessionStorage.getTokenValidationPath)(endpointKey) + "?resource_class=" + resourceClass).then(_handleFetchResponse.parseResponse).then(function (_ref) {
 	        var data = _ref.data;
 	        return resolve(data);
 	      }).catch(function (_ref2) {
@@ -2210,7 +2229,7 @@
 	}
 
 /***/ },
-/* 91 */
+/* 96 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2284,7 +2303,7 @@
 	}
 
 /***/ },
-/* 92 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2299,15 +2318,15 @@
 	exports.requestPasswordResetError = requestPasswordResetError;
 	exports.requestPasswordReset = requestPasswordReset;
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _extend = __webpack_require__(59);
+	var _extend = __webpack_require__(64);
 
 	var _extend2 = _interopRequireDefault(_extend);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -2354,7 +2373,7 @@
 	}
 
 /***/ },
-/* 93 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2369,11 +2388,11 @@
 	exports.updatePasswordError = updatePasswordError;
 	exports.updatePassword = updatePassword;
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -2418,7 +2437,7 @@
 	}
 
 /***/ },
-/* 94 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2433,11 +2452,11 @@
 	exports.updatePasswordModalError = updatePasswordModalError;
 	exports.updatePasswordModal = updatePasswordModal;
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -2482,7 +2501,7 @@
 	}
 
 /***/ },
-/* 95 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2496,13 +2515,13 @@
 	exports.destroyAccountError = destroyAccountError;
 	exports.destroyAccount = destroyAccount;
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _handleFetchResponse = __webpack_require__(87);
+	var _handleFetchResponse = __webpack_require__(84);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
-	var _fetch = __webpack_require__(74);
+	var _fetch = __webpack_require__(79);
 
 	var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -2546,7 +2565,7 @@
 	}
 
 /***/ },
-/* 96 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2557,13 +2576,13 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _authenticate = __webpack_require__(70);
+	var _authenticate = __webpack_require__(75);
 
 	var A = _interopRequireWildcard(_authenticate);
 
@@ -2596,13 +2615,13 @@
 	}), _createReducer));
 
 /***/ },
-/* 97 */
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-immutablejs");
 
 /***/ },
-/* 98 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2613,13 +2632,13 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	var A = _interopRequireWildcard(_configure);
 
@@ -2666,7 +2685,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 99 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2677,33 +2696,33 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _sessionStorage = __webpack_require__(76);
+	var _sessionStorage = __webpack_require__(81);
 
-	var _authenticate = __webpack_require__(70);
+	var _authenticate = __webpack_require__(75);
 
 	var authActions = _interopRequireWildcard(_authenticate);
 
-	var _emailSignIn = __webpack_require__(86);
+	var _emailSignIn = __webpack_require__(92);
 
-	var _emailSignUp = __webpack_require__(89);
+	var _emailSignUp = __webpack_require__(94);
 
-	var _signOut = __webpack_require__(88);
+	var _signOut = __webpack_require__(93);
 
-	var _oauthSignIn = __webpack_require__(90);
+	var _oauthSignIn = __webpack_require__(95);
 
-	var _destroyAccount = __webpack_require__(95);
+	var _destroyAccount = __webpack_require__(100);
 
-	var _server = __webpack_require__(72);
+	var _server = __webpack_require__(77);
 
 	var ssActions = _interopRequireWildcard(_server);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -2757,14 +2776,24 @@
 
 	  // if registration does not require confirmation, user will be signed in at
 	  // this point.
-	  return user.uid ? state.merge({
+	  return state.merge({
 	    attributes: user,
 	    isSignedIn: true,
 	    endpointKey: endpoint
-	  }) : state;
+	  });
 	}), _defineProperty(_createReducer, _oauthSignIn.OAUTH_SIGN_IN_COMPLETE, function (state, _ref7) {
 	  var endpoint = _ref7.endpoint,
 	      user = _ref7.user;
+
+	  if (state.get('isSignedIn') === true) {
+	    var newState = state.setIn(['attributes', 'identities'], user);
+
+	    return newState.merge({
+	      isSignedIn: true,
+	      endpointKey: endpoint
+	    });
+	  }
+
 	  return state.merge({
 	    attributes: user,
 	    isSignedIn: true,
@@ -2794,7 +2823,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 100 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2805,49 +2834,49 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _ui = __webpack_require__(71);
+	var _ui = __webpack_require__(76);
 
 	var uiActions = _interopRequireWildcard(_ui);
 
-	var _emailSignIn = __webpack_require__(86);
+	var _emailSignIn = __webpack_require__(92);
 
 	var emailSignInActions = _interopRequireWildcard(_emailSignIn);
 
-	var _emailSignUp = __webpack_require__(89);
+	var _emailSignUp = __webpack_require__(94);
 
 	var emailSignUpActions = _interopRequireWildcard(_emailSignUp);
 
-	var _signOut = __webpack_require__(88);
+	var _signOut = __webpack_require__(93);
 
 	var signOutActions = _interopRequireWildcard(_signOut);
 
-	var _requestPasswordReset = __webpack_require__(92);
+	var _requestPasswordReset = __webpack_require__(97);
 
 	var requestPasswordResetActions = _interopRequireWildcard(_requestPasswordReset);
 
-	var _oauthSignIn = __webpack_require__(90);
+	var _oauthSignIn = __webpack_require__(95);
 
 	var oAuthSignInActions = _interopRequireWildcard(_oauthSignIn);
 
-	var _updatePassword = __webpack_require__(93);
+	var _updatePassword = __webpack_require__(98);
 
 	var updatePasswordActions = _interopRequireWildcard(_updatePassword);
 
-	var _destroyAccount = __webpack_require__(95);
+	var _destroyAccount = __webpack_require__(100);
 
 	var destroyAccountActions = _interopRequireWildcard(_destroyAccount);
 
-	var _updatePasswordModal = __webpack_require__(94);
+	var _updatePasswordModal = __webpack_require__(99);
 
 	var updatePasswordModalActions = _interopRequireWildcard(_updatePasswordModal);
 
-	var _server = __webpack_require__(72);
+	var _server = __webpack_require__(77);
 
 	var serverActions = _interopRequireWildcard(_server);
 
@@ -2885,11 +2914,6 @@
 	  return state.set("emailSignInSuccessModalVisible", true);
 	}), _defineProperty(_createReducer, emailSignInActions.EMAIL_SIGN_IN_ERROR, function (state) {
 	  return state.set("emailSignInErrorModalVisible", true);
-	}), _defineProperty(_createReducer, oAuthSignInActions.OAUTH_SIGN_IN_COMPLETE, function (state) {
-	  return state.merge({
-	    oAuthSignInSuccessModalVisible: true,
-	    oAuthSignInLoadingProvider: null
-	  });
 	}), _defineProperty(_createReducer, oAuthSignInActions.OAUTH_SIGN_IN_ERROR, function (state) {
 	  return state.merge({
 	    oAuthSignInErrorModalVisible: true,
@@ -2912,12 +2936,6 @@
 	  return state.set("signOutSuccessModalVisible", false);
 	}), _defineProperty(_createReducer, uiActions.HIDE_SIGN_OUT_ERROR_MODAL, function (state) {
 	  return state.set("signOutErrorModalVisible", false);
-	}), _defineProperty(_createReducer, emailSignUpActions.EMAIL_SIGN_UP_COMPLETE, function (state, _ref2) {
-	  var user = _ref2.user;
-	  return state.merge({
-	    emailSignUpSuccessModalVisible: true,
-	    emailSignUpAddress: user.email
-	  });
 	}), _defineProperty(_createReducer, emailSignUpActions.EMAIL_SIGN_UP_ERROR, function (state) {
 	  return state.set("emailSignUpErrorModalVisible", true);
 	}), _defineProperty(_createReducer, uiActions.HIDE_EMAIL_SIGN_UP_SUCCESS_MODAL, function (state) {
@@ -2943,8 +2961,8 @@
 	  return state.set("passwordResetErrorModalVisible", false);
 	}), _defineProperty(_createReducer, uiActions.SHOW_PASSWORD_RESET_ERROR_MODAL, function (state) {
 	  return state.set("passwordResetErrorModalVisible", true);
-	}), _defineProperty(_createReducer, requestPasswordResetActions.REQUEST_PASSWORD_RESET_COMPLETE, function (state, _ref3) {
-	  var message = _ref3.message;
+	}), _defineProperty(_createReducer, requestPasswordResetActions.REQUEST_PASSWORD_RESET_COMPLETE, function (state, _ref2) {
+	  var message = _ref2.message;
 
 	  return state.merge({
 	    requestPasswordResetSuccessModalVisible: true,
@@ -2971,8 +2989,8 @@
 	  return state.set("updatePasswordSuccessModalVisible", false);
 	}), _defineProperty(_createReducer, uiActions.HIDE_UPDATE_PASSWORD_ERROR_MODAL, function (state) {
 	  return state.set("updatePasswordErrorModalVisible", false);
-	}), _defineProperty(_createReducer, destroyAccountActions.DESTROY_ACCOUNT_COMPLETE, function (state, _ref4) {
-	  var message = _ref4.message;
+	}), _defineProperty(_createReducer, destroyAccountActions.DESTROY_ACCOUNT_COMPLETE, function (state, _ref3) {
+	  var message = _ref3.message;
 	  return state.merge({
 	    destroyAccountSuccessModalVisible: true,
 	    destroyAccountMessage: message
@@ -2986,9 +3004,9 @@
 	  });
 	}), _defineProperty(_createReducer, uiActions.HIDE_DESTROY_ACCOUNT_ERROR_MODAL, function (state) {
 	  return state.set("destroyAccountErrorModalVisible", false);
-	}), _defineProperty(_createReducer, serverActions.SS_AUTH_TOKEN_UPDATE, function (state, _ref5) {
-	  var mustResetPassword = _ref5.mustResetPassword,
-	      firstTimeLogin = _ref5.firstTimeLogin;
+	}), _defineProperty(_createReducer, serverActions.SS_AUTH_TOKEN_UPDATE, function (state, _ref4) {
+	  var mustResetPassword = _ref4.mustResetPassword,
+	      firstTimeLogin = _ref4.firstTimeLogin;
 	  return state.merge({
 	    passwordResetSuccessModalVisible: mustResetPassword,
 	    firstTimeLoginSuccessModalVisible: firstTimeLogin
@@ -3005,7 +3023,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 101 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3016,17 +3034,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _emailSignIn = __webpack_require__(86);
+	var _emailSignIn = __webpack_require__(92);
 
 	var A = _interopRequireWildcard(_emailSignIn);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -3070,7 +3088,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 102 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3081,17 +3099,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _emailSignUp = __webpack_require__(89);
+	var _emailSignUp = __webpack_require__(94);
 
 	var A = _interopRequireWildcard(_emailSignUp);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -3138,7 +3156,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 103 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3149,17 +3167,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _oauthSignIn = __webpack_require__(90);
+	var _oauthSignIn = __webpack_require__(95);
 
 	var A = _interopRequireWildcard(_oauthSignIn);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -3197,7 +3215,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 104 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3208,17 +3226,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _requestPasswordReset = __webpack_require__(92);
+	var _requestPasswordReset = __webpack_require__(97);
 
 	var A = _interopRequireWildcard(_requestPasswordReset);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -3262,7 +3280,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 105 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3273,17 +3291,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _updatePassword = __webpack_require__(93);
+	var _updatePassword = __webpack_require__(98);
 
 	var A = _interopRequireWildcard(_updatePassword);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -3327,7 +3345,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 106 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3338,17 +3356,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _updatePasswordModal = __webpack_require__(94);
+	var _updatePasswordModal = __webpack_require__(99);
 
 	var A = _interopRequireWildcard(_updatePasswordModal);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -3392,7 +3410,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 107 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3401,13 +3419,13 @@
 	  value: true
 	});
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _server = __webpack_require__(72);
+	var _server = __webpack_require__(77);
 
 	var A = _interopRequireWildcard(_server);
 
@@ -3443,7 +3461,7 @@
 	}));
 
 /***/ },
-/* 108 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3454,17 +3472,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _signOut = __webpack_require__(88);
+	var _signOut = __webpack_require__(93);
 
 	var A = _interopRequireWildcard(_signOut);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -3503,7 +3521,7 @@
 	}), _createReducer));
 
 /***/ },
-/* 109 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3514,17 +3532,17 @@
 
 	var _createReducer;
 
-	var _immutable = __webpack_require__(9);
+	var _immutable = __webpack_require__(14);
 
 	var _immutable2 = _interopRequireDefault(_immutable);
 
-	var _reduxImmutablejs = __webpack_require__(97);
+	var _reduxImmutablejs = __webpack_require__(102);
 
-	var _destroyAccount = __webpack_require__(95);
+	var _destroyAccount = __webpack_require__(100);
 
 	var A = _interopRequireWildcard(_destroyAccount);
 
-	var _configure = __webpack_require__(68);
+	var _configure = __webpack_require__(73);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 

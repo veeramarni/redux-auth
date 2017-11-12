@@ -104,7 +104,7 @@ export function configure(endpoint={}, settings={}) {
         }
       } else {
         mustResetPassword = authRedirectHeaders && authRedirectHeaders.reset_password
-        firstTimeLogin = authRedirectHeaders && authRedirectHeaders.first_time_login
+        firstTimeLogin = authRedirectHeaders && authRedirectHeaders.account_confirmation_success
       }
 
       if (authRedirectLocation) {
