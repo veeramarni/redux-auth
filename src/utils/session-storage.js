@@ -152,7 +152,7 @@ export function getConfirmationSuccessUrl () {
 }
 
 export function getPasswordResetRedirectUrl () {
-  return root.authState.currentSettings.confirmationSuccessUrl();
+  return root.authState.currentSettings.passwordResetSuccessUrl();
 }
 
 export function getApiUrl(key) {

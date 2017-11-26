@@ -6,6 +6,7 @@ import {
   getCurrentEndpointKey,
   getTokenValidationPath,
   persistData,
+  retrieveData,
 } from "../utils/session-storage";
 import {storeCurrentEndpointKey} from "./configure";
 import {parseResponse} from "../utils/handle-fetch-response";
@@ -35,7 +36,10 @@ function listenForCredentials (endpointKey, popup, provider, resolve, reject) {
     if (creds && creds.uid) {
       popup.close();
       persistData(C.SAVED_CREDS_KEY, normalizeTokenKeys(creds));
-      fetch(getTokenValidationPath(endpointKey))
+      let currentCreds = retrieveData(C.SAVED_CREDS_KEY);
+      let resourceClass = currentCreds["resource_class"];
+
+      fetch(`${getTokenValidationPath(endpointKey)}?resource_class=${resourceClass}`)
         .then(parseResponse)
         .then(({data}) => resolve(data))
         .catch(({errors}) => reject({errors}));

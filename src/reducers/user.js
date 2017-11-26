@@ -46,20 +46,29 @@ export default createReducer(initialState, {
   [EMAIL_SIGN_UP_COMPLETE]: (state, { endpoint, user }) => {
     // if registration does not require confirmation, user will be signed in at
     // this point.
-    return (user.uid)
-      ? state.merge({
-        attributes: user,
-        isSignedIn: true,
-        endpointKey: endpoint
-      })
-      : state;
+    return state.merge({
+            attributes: user,
+            isSignedIn: true,
+            endpointKey: endpoint
+          });
   },
 
-  [OAUTH_SIGN_IN_COMPLETE]: (state, { endpoint, user }) => state.merge({
-    attributes: user,
-    isSignedIn: true,
-    endpointKey: endpoint
-  }),
+  [OAUTH_SIGN_IN_COMPLETE]: (state, { endpoint, user }) => {
+    if (state.get('isSignedIn') === true) {
+      const newState = state.setIn(['attributes', 'identities'], user);
+
+      return newState.merge({
+        isSignedIn: true,
+        endpointKey: endpoint
+      });
+    }
+
+    return state.merge({
+      attributes: user,
+      isSignedIn: true,
+      endpointKey: endpoint
+    });
+  },
 
   [ssActions.SS_AUTH_TOKEN_UPDATE]: (state, {user, mustResetPassword, firstTimeLogin}) => {
     return state.merge({

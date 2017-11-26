@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import RequestTestSuccessModal from "./RequestTestSuccessModal";
 import RequestTestErrorModal from "./RequestTestErrorModal";
 import * as BSTheme from "../../../../src/views/bootstrap";

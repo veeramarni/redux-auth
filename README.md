@@ -324,7 +324,7 @@ import { RequestPasswordResetForm } from "redux-auth/bootstrap-theme";
 
 // render
 render: () {
-  return <RequestPassswordResetForm />;
+  return <RequestPasswordResetForm />;
 }
 ~~~
 
@@ -535,7 +535,7 @@ const store = compose(
 // url of the current request. also be sure to set `isServer` to true.
 export function renderApp({cookies, isServer, currentLocation} = {}) {
   // configure redux-auth BEFORE rendering the page
-  store.dispatch(configure(
+  return store.dispatch(configure(
     // use the FULL PATH to your API
     {apiUrl: "http://api.catfancy.com"},
     {isServer, cookies, currentLocation}
@@ -869,3 +869,4 @@ WTFPL © Lynn Dylan Hurley
 
 [mui-error-dialog]: https://github.com/lynndylanhurley/redux-auth/raw/master/docs/images/mui-error-dialog.png
 [mui-inline-errors]: https://github.com/lynndylanhurley/redux-auth/raw/master/docs/images/mui-inline-errors.png
+

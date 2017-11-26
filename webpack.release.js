@@ -10,7 +10,8 @@ module.exports = {
     "index":             "./src/index",
     "bootstrap-theme":   "./src/views/bootstrap/index",
     "default-theme":     "./src/views/default/index",
-    "material-ui-theme": "./src/views/material-ui/index"
+    "material-ui-theme": "./src/views/material-ui/index",
+    "semantic-ui-theme": "./src/views/semantic-ui/index"
   },
   output:  {
     path:          path.join(__dirname),
@@ -48,6 +49,7 @@ module.exports = {
       "react-loader": "commonjs react-loader",
       "url": "commonjs url",
       "react-bootstrap": "commonjs react-bootstrap",
+      "semantic-ui-react": "commonjs semantic-ui-react",
       "material-ui/Dialog": "commonjs material-ui/Dialog",
       "material-ui/RaisedButton": "commonjs material-ui/RaisedButton",
       "material-ui/FlatButton": "commonjs material-ui/FlatButton",
@@ -65,9 +67,9 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({__CLIENT__: true, __SERVER__: false}),
     new webpack.DefinePlugin({"process.env": {NODE_ENV: "\"production\""}}),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin()
+    // new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    // new webpack.optimize.UglifyJsPlugin()
   ],
   module:  {
     loaders: [
